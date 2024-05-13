@@ -27,8 +27,6 @@ TARGET_PRODUCT_SHORT := $(subst miku_,,$(TARGET_DEVICE))
 ifeq ($(MIKU_GAPPS), true)
     $(call inherit-product, vendor/gms/gms.mk)
     MIKU_TYPE = GAPPS-
-else ifeq ($(TARGET_WITH_PREBUILT_CHROMIUM), true)
-    PRODUCT_PACKAGES += Chromium
 endif
 
 ifeq ($(TARGET_MIKU_BUILD_VARIANT),OFFICIAL)
