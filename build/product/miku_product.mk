@@ -40,6 +40,7 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     messaging \
     MUBB \
+    MULS_Dummy \
     PartnerBookmarksProvider \
     QuickAccessWallet \
     Stk \
