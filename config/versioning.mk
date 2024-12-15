@@ -17,10 +17,10 @@
 # limitations under the License.
 #
 
-PLATFORM_MIKU_RELEASE := Vampire
+PLATFORM_MIKU_RELEASE := Vampire_v2
 PLATFORM_MIKU_VERSION := $(PLATFORM_MIKU_RELEASE).$(shell date +%y%m%d%H)
 
-MIKU_ROM_VERSION := Vampire_0.3.2
+MIKU_ROM_VERSION := Vampire_0.4.0
 
 TARGET_PRODUCT_SHORT := $(subst miku_,,$(TARGET_DEVICE))
 
