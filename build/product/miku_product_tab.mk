@@ -39,6 +39,12 @@ ifneq ($(TARGET_NO_APERTURE),true)
 else
     PRODUCT_PACKAGES += Camera2
 endif
+
+# Miku UI Music Center
+ifneq ($(TARGET_EXCLUDE_MUSIC_CENTER),true)
+PRODUCT_PACKAGES += MikuUIMusicCenter
+endif
+
 PRODUCT_PACKAGES += \
     Gboard \
     LiveWallpapersPicker \
