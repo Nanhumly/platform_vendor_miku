@@ -22,7 +22,11 @@ $(call inherit-product, vendor/miku/config/versioning.mk)
 $(call inherit-product, vendor/miku/config/overlay.mk)
 
 # Sign for official build
+ifeq ($(TARGET_FORCE_SIGN_CHECK),true)
 $(call inherit-product, vendor/miku-secret/keys/sign.mk)
+else
+$(call inherit-product-if-exists, vendor/miku-secret/keys/sign.mk)
+endif
 
 ifneq ($(TARGET_DISABLE_EPPE),true)
 # Require all requested packages to exist
