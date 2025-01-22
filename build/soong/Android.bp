@@ -84,6 +84,25 @@ gralloc_10_usage_bits {
 }
 
 soong_config_module_type {
+    name: "power_libperfmgr",
+    module_type: "cc_defaults",
+    config_namespace: "mikuGlobalVars",
+    value_variables: ["target_power_libperfmgr_mode_extension_lib"],
+    properties: [
+        "whole_static_libs",
+    ],
+}
+
+power_libperfmgr {
+    name: "power_libperfmgr_defaults",
+    soong_config_variables: {
+        target_power_libperfmgr_mode_extension_lib: {
+            whole_static_libs: ["%s"],
+        },
+    },
+}
+
+soong_config_module_type {
     name: "target_process_sdk_version_overrides",
     module_type: "cc_defaults",
     config_namespace: "mikuGlobalVars",
